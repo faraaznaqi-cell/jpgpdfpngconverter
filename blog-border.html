@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Borders to Images - Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .blog-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .blog-header h1 {
+            color: #3a0ca3;
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .blog-content h2 {
+            color: #4361ee;
+            margin: 25px 0 15px 0;
+            font-size: 1.5rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .blog-content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .blog-content li {
+            margin-bottom: 10px;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            padding: 12px 25px;
+            background: #4361ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-btn:hover {
+            background: #3a0ca3;
+        }
+        
+        .nav-btn.home {
+            background: #7209b7;
+        }
+        
+        .nav-btn.home:hover {
+            background: #5a08a1;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-container {
+                margin: 20px auto;
+                padding: 25px;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+            }
+            
+            .nav-btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Adding Borders to Images</h1>
+            <p>Enhance your images with beautiful borders and frames</p>
+        </div>
+        
+        <div class="blog-content">
+            <h2>Why Add Borders?</h2>
+            <p>Borders can add a finishing touch to your images, making them stand out on websites, social media, or printed materials. A well-designed border can create focus, add professionalism, and enhance the overall visual appeal of your images.</p>
+            
+            <h2>Border Thickness Guidelines</h2>
+            <p>Choose the right border thickness for your needs:
+            <ul>
+                <li><strong>Thin borders (1-3px):</strong> Perfect for subtle definition and clean, modern looks</li>
+                <li><strong>Medium borders (5-10px):</strong> Great for creating framed effects and emphasis</li>
+                <li><strong>Thick borders (15px+):</strong> Ideal for artistic effects and dramatic presentations</li>
+            </ul>
+            </p>
+            
+            <h2>Color Selection</h2>
+            <p>Consider using border colors that complement your image or match your website's color scheme. White or black borders are classic choices that work with almost any image. For more creative projects, consider using colors that match the dominant tones in your image.</p>
+            
+            <h2>Rounded Corners</h2>
+            <p>Rounded corners are popular for modern web design and mobile applications. They create a softer, more approachable look. Use corner radius values between 5-20px for subtle rounding, or higher values for more dramatic circular effects.</p>
+            
+            <h2>Professional Applications</h2>
+            <ul>
+                <li><strong>Photography:</strong> Subtle borders enhance presentation without distracting</li>
+                <li><strong>Social Media:</strong> Decorative borders help content stand out in feeds</li>
+                <li><strong>E-commerce:</strong> Clean borders create consistent product image presentation</li>
+                <li><strong>Web Design:</strong> Borders create visual separation and hierarchy</li>
+                <li><strong>Print Materials:</strong> Framed borders prepare images for physical presentation</li>
+            </ul>
+            
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Keep borders subtle for professional photography</li>
+                <li>Use contrasting colors for maximum impact</li>
+                <li>Consider the final viewing platform when choosing border styles</li>
+                <li>Experiment with different border styles for creative projects</li>
+                <li>Always preview bordered images on different backgrounds</li>
+            </ul>
+        </div>
+        
+        <div class="navigation-buttons">
+            <a href="blog-resize.html" class="nav-btn">← Previous: Resizing Tips</a>
+            <a href="blog-compressor.html" class="nav-btn">Next: Compression →</a>
+            <a href="index.html" class="nav-btn home">Go to Tool</a>
+        </div>
+    </div>
+</body>
+</html>

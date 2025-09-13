@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JPGPDFPNG Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .contact-header h1 {
+            color: #3a0ca3;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .contact-header p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .email-section {
+            margin: 30px 0;
+        }
+        
+        .email-text {
+            font-size: 1.3rem;
+            color: #4361ee;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 15px 0 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .email-text:hover {
+            background: #e9ecef;
+        }
+        
+        .copy-message {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .response-time {
+    padding: 20px 0;
+    margin: 30px 0;
+}
+        
+        .response-time h3 {
+            color: #3a0ca3;
+            margin-bottom: 10px;
+        }
+        
+        .go-to-tool {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #4361ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .go-to-tool:hover {
+            background: #3a0ca3;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+            
+            .email-text {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>Have a question? Send us an email and we will reply within 24 to 48 hours.</p>
+        </div>
+        
+        <div class="email-section">
+            <div class="email-text" id="emailText">
+                faraaznaqi@gmail.com
+            </div>
+            <p class="copy-message" id="copyMessage">Click to copy</p>
+        </div>
+        
+        <div class="response-time">
+            <h3>Response Time</h3>
+            <p>We typically respond to all emails within 24-48 hours during business days (Monday-Friday).</p>
+        </div>
+        
+        <a href="index.html" class="go-to-tool">Go to Tool</a>
+    </div>
+
+    <script>
+        // Email copy functionality
+        const emailText = document.getElementById('emailText');
+        const copyMessage = document.getElementById('copyMessage');
+        
+        emailText.addEventListener('click', function() {
+            const email = 'faraaznaqi@gmail.com';
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(email).then(function() {
+                copyMessage.textContent = '✓ Copied to clipboard!';
+                copyMessage.style.color = 'green';
+                
+                // Reset message after 3 seconds
+                setTimeout(function() {
+                    copyMessage.textContent = 'Click to copy';
+                    copyMessage.style.color = '#666';
+                }, 3000);
+            }).catch(function(err) {
+                copyMessage.textContent = 'Failed to copy';
+                copyMessage.style.color = 'red';
+            });
+        });
+    </script>
+</body>
+</html>
