@@ -1,0 +1,41 @@
+/* ===== COMMON STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.nav-btn {
+    padding: 12px 25px;
+    background: #4361ee;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: #3a0ca3;
+}
+
+.nav-btn.home {
+    background: #7209b7;
+}
+
+.nav-btn.home:hover {
+    background: #5a08a1;
+}
+
+@media (max-width: 768px) {
+    .nav-btn {
+        text-align: center;
+    }
+}

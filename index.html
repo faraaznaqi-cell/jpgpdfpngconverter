@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>jpgpdfpngconverter.com - Convert WebP, JPG, PNG, PDF Images Online Free</title>
+<link rel="canonical" href="https://www.jpgpdfpngconverter.com/" />
 <meta content="jpgpdfpngconverter.com - Free online image converter. Convert WebP to PDF, JPG to PNG, PNG to PDF, resize, compress images. No uploads required. 100% secure browser-based tool." name="description">
 <link href="https://jpgpdfpngconverter.com/" rel="canonical"/>
 <meta content="jpgpdfpngconverter.com - WebP to PDF, JPG, PNG Converter Tool" property="og:title"/>
@@ -707,12 +708,7 @@
 <option value="bmp">BMP</option>
 <option value="pdf">PDF</option>
 </select>
-<div class="batch-options" style="margin: 1rem 0; display: none;" id="batchOptions">
-    <label style="display: flex; align-items: center; gap: 0.5rem;">
-    <input type="checkbox" id="zipDownload"/>
-    Download as ZIP archive
-</label>
-</div>
+
 <button class="btn" id="convertBtn">Convert</button>
 </div>
 <div class="tool-description">
@@ -1715,22 +1711,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Check if conversion is same format
-        function isSameFormatConversion(file, targetFormat) {
-            if (file.type === 'application/pdf' && targetFormat === 'pdf') return true;
-            
-            const fileExtension = file.name.split('.').pop().toLowerCase();
-            const formatMap = {
-                'jpeg': 'jpg',
-                'jpg': 'jpeg',
-                'png': 'png',
-                'webp': 'webp',
-                'gif': 'gif',
-                'bmp': 'bmp'
-            };
-            
-            return formatMap[targetFormat] === fileExtension;
-        }
+       // Check if conversion is same format
+function isSameFormatConversion(file, targetFormat) {
+    if (file.type === 'application/pdf' && targetFormat === 'pdf') return true;
+    
+    const fileExtension = file.name.split('.').pop().toLowerCase();
+    const formatMap = {
+        'jpeg': 'jpg',
+        'jpg': 'jpeg',
+        'png': 'png',
+        'webp': 'webp',
+        'gif': 'gif',
+        'bmp': 'bmp'
+    };
+    
+    const isSame = formatMap[targetFormat] === fileExtension;
+    
+    if (isSame) {
+        showErrorPopup("Same format conversion not possible. Please select a different format.");
+    }
+    
+    return isSame;
+}
 
         async function convertBatchImages() {
             if (converterCurrentFiles.length === 0) {
@@ -1739,15 +1741,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const format = formatSelect.value;
-            const zipDownload = document.getElementById('zipDownload').checked;
-            
-            // Check for same format conversion
-            for (const file of converterCurrentFiles) {
-                if (isSameFormatConversion(file, format)) {
-                    showErrorPopup("Same format conversion not possible. Please select a different format.");
-                    return;
-                }
-            }
+            const zipDownload = false;
+            // Check for same format conversion (specifically JPG to JPG)
+for (const file of converterCurrentFiles) {
+    const fileExtension = file.name.split('.').pop().toLowerCase();
+    if ((fileExtension === 'jpg' || fileExtension === 'jpeg') && (format === 'jpeg' || format === 'jpg')) {
+        showErrorPopup("Same format conversion not possible. Please select a different format.");
+        return;
+    }
+    if (isSameFormatConversion(file, format)) {
+        return;
+    }
+}
             
             convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
             convertBtn.disabled = true;
@@ -1788,13 +1793,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
                 
-                // Download ZIP if requested
-                if (zipDownload) {
-                    const zipBlob = await zip.generateAsync({type: 'blob'});
-                    
-                    // Use FileSaver to save with .zip extension
-                    saveAs(zipBlob, 'converted-images.zip');
-                }
+              
                 
             } catch (error) {
                 console.error("Batch conversion error:", error);
@@ -1815,11 +1814,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const file = converterCurrentFiles[0];
             const format = formatSelect.value;
             
-            // Check for same format conversion
-            if (isSameFormatConversion(file, format)) {
-                showErrorPopup("Same format conversion not possible. Please select a different format.");
-                return;
-            }
+           // Check for same format conversion (specifically JPG to JPG)
+const fileExtension = file.name.split('.').pop().toLowerCase();
+if ((fileExtension === 'jpg' || fileExtension === 'jpeg') && (format === 'jpeg' || format === 'jpg')) {
+    showErrorPopup("Same format conversion not possible. Please select a different format.");
+    return;
+}
+if (isSameFormatConversion(file, format)) {
+    return;
+}
             
             // Handle PDF to image conversion
             if (file.type === 'application/pdf' && format !== 'pdf') {
