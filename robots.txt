@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-
-Sitemap: https://jpgpdfpngconverter.com/sitemap.xml
+Sitemap: https://www.jpgpdfpngconverter.com/sitemap.xml
