@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - JPGPDFPNG Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <meta name="description" content="About jpgpdfpngconverter.com - Free tools for image conversion, resizing, compression, and borders. Convert and optimize up to 10 images online instantly.">
+  <link rel="canonical" href="https://www.jpgpdfpngconverter.com/about" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+
+  <style>
+  /* ===== GLOBAL RESET ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    background: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  img, video, canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ===== HEADER ===== */
+  .header-container {
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+  }
+  .header-logo {
+    height: 90px;
+    width: auto;
+  }
+  .search-container {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+  }
+  .search-form {
+    display: flex;
+    width: 100%;
+  }
+  .search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    outline: none;
+    background: white;
+  }
+  .search-button {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  .search-button:hover {
+    background-color: #3a56d4;
+  }
+  .menu-container {
+    position: relative;
+    margin-right: 15%;
+  }
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  .menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    display: none;
+    z-index: 1003;
+    border: 1px solid #e0e0e0;
+  }
+  .dropdown-menu.active {
+    display: block;
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  .dropdown-menu a:hover {
+    background-color: #4361ee;
+    color: white;
+  }
+
+  /* ===== PAGE CONTENT ===== */
+  .page-content {
+    flex: 1;
+    padding: 20px;
+  }
+  .about-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .about-header h1 {
+    color: #3a0ca3;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+  }
+  .about-header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  .about-section {
+    margin-bottom: 40px;
+  }
+  .about-section h2 {
+    color: #4361ee;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+  }
+  .about-section p, .about-section ul {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .about-section ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  .highlight-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #3a0ca3;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  /* ===== BOTTOM BUTTONS ===== */
+  .blog-bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  .bottom-btn {
+    padding: 8px 16px;
+    background: #7209b7;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(114, 9, 183, 0.2);
+    font-size: 0.85rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom-btn:hover {
+    background: #5a08a1;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(90, 8, 161, 0.25);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+  }
+  .legal-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legal-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .legal-links a:hover {
+    color: #7209b7;
+    text-decoration: underline;
+  }
+
+  /* ===== MOBILE FIXES ===== */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-wrap: wrap;
+      padding: 10px 15px;
+    }
+    .logo-container {
+      flex: 1;
+      margin-left: 0; /* STANDARD: Remove left margin on mobile */
+    }
+    .header-logo {
+      height: 60px; /* STANDARD: Set logo height to 60px */
+    }
+    .search-container {
+      order: 3;
+      max-width: 100%;
+      margin: 15px 0 0 0;
+      flex: 0 0 100%;
+      padding: 0 5px; /* STANDARD: Small padding instead of centering */
+      box-sizing: border-box;
+    }
+    .search-form {
+      width: 100%;
+      min-width: 100%; /* STANDARD: Ensure full width */
+    }
+    .search-input {
+      min-width: 0;
+      flex: 1;
+      width: 100%; /* STANDARD: Full width input */
+    }
+    .search-button {
+      flex-shrink: 0;
+      padding: 10px 15px; /* STANDARD: Consistent padding */
+    }
+    .menu-container {
+      margin-right: 0; /* STANDARD: Remove right margin on mobile */
+    }
+    .dropdown-menu {
+      position: fixed;
+      top: 80px; /* STANDARD: Fixed position from top */
+      right: 20px; /* STANDARD: Fixed position from right */
+      left: auto; /* STANDARD: Override previous left positioning */
+      background: white;
+      width: 250px; /* STANDARD: Fixed width */
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      padding: 10px 0;
+      display: none;
+      z-index: 99999;
+      border: 1px solid #ddd;
+      max-width: none; /* STANDARD: Remove max-width constraint */
+    }
+
+    /* Mobile buttons fix */
+    .blog-bottom-nav {
+      flex-wrap: nowrap;
+      gap: 10px;
+      padding: 0 10px;
+    }
+    
+    .blog-bottom-nav .bottom-btn:first-child {
+      width: 30%; /* Guides button - smaller */
+      font-size: 0.8rem;
+      padding: 10px 5px;
+      white-space: nowrap;
+    }
+    
+    .blog-bottom-nav .bottom-btn:last-child {
+      width: 70%; /* Access All Tools Now button - bigger */
+      font-size: 0.75rem; /* Slightly smaller font to fit */
+      padding: 10px 5px;
+      white-space: normal; /* Allow text wrapping */
+      line-height: 1.2; /* Better line spacing */
+      min-height: 40px; /* Ensure enough height */
+    }
+    
+    .about-container {
+      padding: 25px;
+      margin: 20px auto;
+    }
+    
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Additional small screen optimization */
+  @media (max-width: 480px) {
+    .blog-bottom-nav .bottom-btn:first-child {
+      width: 35%;
+    }
+    
+    .blog-bottom-nav .bottom-btn:last-child {
+      width: 65%;
+      font-size: 0.7rem;
+    }
+  }
+
+  /* Desktop logo and dropdown positioning (preserved) */
+  .logo-container { margin-left: 15%; }
+  .menu-container { margin-right: 15%; }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="logo.png" alt="Jpgpdfpngconverter Logo" class="header-logo">
+    </div>
+    <div class="search-container">
+      <form class="search-form" id="searchForm">
+        <input type="text" class="search-input" placeholder="Search tools and guides..." id="searchInput">
+        <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <!-- Menu Button on the right -->
+        <div class="menu-container">
+            <button class="menu-button" id="menuButton">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="blog.html">How-To-Guides</a>
+    <a href="blog.html#free-tools">About All Tools</a>
+    <!-- INTERNAL LINKS ADDED -->
+    <a href="index.html#converterTool">Converter Tool</a>
+    <a href="index.html#resizeTool">Resizer Tool</a>    
+    <a href="index.html#borderTool">Border Tool</a>   
+    <a href="index.html#compressorTool">Compressor Tool</a>
+    <a href="index.html#faqSection">FAQ Section</a>
+    <!-- EXTERNAL LINKS -->
+    <a href="about.html">About</a>
+    <a href="contact-us.html">Contact</a>
+</div>
+    </div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page-content">
+    <div class="about-container">
+      <div class="about-header">
+        <h1>About Us</h1>
+        <p>Making image editing simple, free, and accessible for everyone.</p>
+      </div>
+      <div class="about-section">
+        <h2>Who We Are</h2>
+        <p><strong>jpgpdfpngconverter.com</strong> was built by an independent IT professional who learned through experience rather than a formal degree. Years of real-world problem-solving and hard work inspired the creation of this platform — so that anyone can edit and process images easily, without technical barriers.</p>
+      </div>
+      <div class="about-section">
+        <h2>Our Tools</h2>
+        <p>We provide four powerful browser-based tools, all with batch processing (up to 10 files or 20 MB at a time):</p>
+        <ul>
+          <li><strong>Image Converter:</strong> Convert JPG, PNG, and PDF formats in bulk.</li>
+          <li><strong>Image Resizer:</strong> Adjust dimensions of multiple images instantly.</li>
+          <li><strong>Image Compressor:</strong> Reduce file sizes while maintaining clarity.</li>
+          <li><strong>Image Border Tool:</strong> Add customized borders to several images at once.</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <h2>Our Mission</h2>
+        <div class="highlight-box">
+          <p>Our mission is simple: to make image editing <em>fast, secure, and free</em>. All our tools run directly in your browser — no downloads, no installations, and no hidden charges. Whether you're a student, designer, or professional, <strong>jpgpdfpngconverter.com</strong> helps you save time and effort.</p>
+        </div>
+      </div>
+      <div class="about-section">
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>✔ Free and easy to use</li>
+          <li>✔ Batch processing (up to 10 files)</li>
+          <li>✔ Browser-based and secure</li>
+          <li>✔ Supports images up to 20 MB</li>
+        </ul>
+      </div>
+      <div class="blog-bottom-nav">
+        <a href="blog.html" class="bottom-btn">Guides</a>
+        <a href="index.html" class="bottom-btn">Access All Tools Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 jpgpdfpngconverter.com | All Rights Reserved</p>
+    
+    <!-- TOOL QUICK LINKS ADDED -->
+    <div class="legal-links" style="margin-bottom: 10px;">
+       <a href="index.html#converterTool">Converter Tool</a>
+    <a href="index.html#resizeTool">Resizer Tool</a>    
+    <a href="index.html#borderTool">Border Tool</a>   
+    <a href="index.html#compressorTool">Compressor Tool</a>
+    <a href="index.html#faqSection">FAQ Section</a>
+    </div>
+    
+    <!-- EXISTING LEGAL LINKS -->
+    <div class="legal-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="blog.html">Blog</a>  
+        <a href="blog.html#free-tools">Tools</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+    </div>
+</footer>
+
+
+
+  <script>
+    // ===== MENU TOGGLE =====
+    const menuButton = document.getElementById('menuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    menuButton.addEventListener('click', e => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', () => {
+      dropdownMenu.classList.remove('active');
+    });
+
+    dropdownMenu.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+
+    // ===== SEARCH FUNCTION =====
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) return;
+
+      const searchMappings = {
+        'converter': 'image-converter-tool.html',
+        'convert': 'image-converter-tool.html',
+        'resize': 'image-resizer-tool.html',
+        'resizer': 'image-resizer-tool.html',
+        'border': 'image-border-tool.html',
+        'frame': 'image-border-tool.html',
+        'compress': 'image-compressor-tool.html',
+        'compressor': 'image-compressor-tool.html',
+        'tools': 'blog.html#free-tools',
+        'guide': 'blog.html',
+        'guides': 'blog.html',
+        'about': 'about.html',
+        'contact': 'contact-us.html',
+        'home': 'index.html'
+      };
+
+      let targetPage = 'blog.html';
+      for (const [k, page] of Object.entries(searchMappings)) {
+        if (query.includes(k)) {
+          targetPage = page;
+          break;
+        }
+      }
+      window.location.href = targetPage;
+    });
+
+    // ===== BUTTON PRESS EFFECTS =====
+    document.querySelectorAll('.bottom-btn').forEach(btn => {
+      btn.addEventListener('mousedown', () => btn.style.transform = 'translateY(0)');
+      btn.addEventListener('mouseup', () => btn.style.transform = 'translateY(-1px)');
+    });
+  </script>
+</body>
+</html>
