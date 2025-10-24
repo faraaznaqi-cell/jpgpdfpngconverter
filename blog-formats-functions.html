@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Different Formats and Functions - Blog</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;family=Dancing+Script:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<meta name="description" content="Understand JPG, PNG, WebP, GIF, BMP, and PDF formats. Learn compression, transparency, and animation features. Convert your files free online now.">
+<link rel="canonical" href="https://www.jpgpdfpngconverter.com/blog-formats-functions" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png" type="image/png">
+
+<style>
+/* ===== GLOBAL RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    background: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img, video, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== HEADER STYLES ===== */
+.header-container {
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000; /* FIX: Added z-index */
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.header-logo {
+    height: 90px;
+    width: auto;
+}
+
+/* Search Bar */
+.search-container {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    outline: none;
+    background: white;
+}
+
+.search-button {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #3a56d4;
+}
+
+/* Menu Button */
+.menu-container {
+    position: relative;
+    margin-right: 15%;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== DROPDOWN MENU - COMPLETELY FIXED ===== */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    display: none;
+    z-index: 1003; /* FIX: Updated z-index */
+    border: 1px solid #e0e0e0;
+    /* CRITICAL FIX: Ensure dropdown is fully visible */
+    overflow: visible;
+    max-height: none;
+    height: auto;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /* CRITICAL FIX: Prevent text wrapping */
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #4361ee;
+    color: white;
+}
+
+/* ===== BLOG CONTENT STYLES ===== */
+.blog-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex: 1;
+    width: 100%;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-header h1 {
+    color: #3a0ca3;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.blog-content {
+    line-height: 1.8;
+    color: #333;
+}
+
+.blog-content h2 {
+    color: #4361ee;
+    margin: 25px 0 15px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.blog-content h3 {
+    color: #7209b7;
+    margin: 20px 0 10px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.blog-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.format-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #4361ee;
+}
+
+/* Beautiful FAQ Design */
+.faq-section {
+    margin-top: 40px;
+}
+
+.faq-title {
+    color: #3a0ca3;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.faq-container {
+    margin-top: 1rem;
+}
+
+.faq-item {
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.2rem;
+    text-align: left;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #3a0ca3;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    transform: translateY(-2px);
+}
+
+.faq-question i {
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    color: #7209b7;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: all 0.3s ease-out;
+}
+
+.faq-answer.active {
+    padding: 1.2rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+.content-nav {
+    display: flex;
+    justify-content: space-between; /* Back left, Next right */
+    align-items: center;
+    margin-top: 40px;
+    padding: 25px 0 0;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    width: 80px;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.nav-btn .btn-main {
+    padding: 8px 5px;
+    background: #4361ee;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(67, 97, 238, 0.2);
+    width: 100%;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.nav-btn .btn-topic {
+    font-size: 0.7rem;
+    color: #666;
+    text-align: center;
+    margin-top: 6px;
+    font-weight: 400;
+    line-height: 1.3;
+    width: 120px;
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.nav-btn:hover .btn-main {
+    background: #3a0ca3;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(58, 12, 163, 0.25);
+}
+
+.blog-bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.bottom-btn {
+    padding: 8px 16px;
+    background: #7209b7;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(114, 9, 183, 0.2);
+    font-size: 0.85rem;
+}
+
+.bottom-btn:hover {
+    background: #5a08a1;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(90, 8, 161, 0.25);
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+.legal-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.legal-links a:hover {
+    color: #7209b7;
+    text-decoration: underline;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+    
+    .logo-container {
+        flex: 1;
+        margin-left: 0; /* FIX: Added */
+    }
+    
+    .header-logo {
+        height: 60px; /* FIX: Updated */
+    }
+    
+    .search-container {
+        order: 3;
+        max-width: 100%;
+        margin: 15px 0 0 0;
+        flex: 0 0 100%;
+        padding: 0 5px; /* FIX: Added */
+        box-sizing: border-box;
+    }
+    
+    .menu-container {
+        margin-right: 0;
+    }
+    
+    /* MOBILE DROPDOWN FIX */
+    .dropdown-menu {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        left: auto;
+        background: white;
+        width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        padding: 10px 0;
+        display: none;
+        z-index: 99999;
+        border: 1px solid #ddd;
+        max-width: none;
+        /* CRITICAL FIX: Ensure mobile dropdown is fully visible */
+        overflow: visible;
+        height: auto;
+    }
+    
+    .blog-container {
+        margin: 20px;
+        padding: 25px;
+        width: calc(100% - 40px);
+    }
+    
+    /* FIX: Mobile navigation buttons - Back left, Next right */
+    .content-nav {
+        flex-direction: row; /* Changed from column to row */
+        gap: 15px; /* Reduced gap */
+        align-items: center;
+        padding: 20px 0 0;
+        justify-content: space-between; /* Back left, Next right */
+    }
+    
+    .nav-btn {
+        width: 80px;
+        margin: 0;
+    }
+    
+    .blog-bottom-nav {
+        flex-wrap: wrap;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .faq-answer.active {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 8px 5px;
+    }
+    
+    .search-container {
+        margin: 10px 0 0 0;
+    }
+    
+    .search-input {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .search-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dropdown-menu {
+        right: 10px;
+        width: calc(100vw - 20px);
+        max-width: 280px;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header-container">
+        <!-- Logo on the left -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Jpgpdfpngconverter Logo" class="header-logo">
+        </div>
+        
+        <!-- Search Bar in the center -->
+        <div class="search-container">
+            <form class="search-form" id="searchForm">
+                <input type="text" class="search-input" placeholder="Search tools and guides..." id="searchInput">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        
+        <!-- Menu Button on the right -->
+        <div class="menu-container">
+            <button class="menu-button" id="menuButton">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="blog.html">How-To-Guides</a>
+    <a href="blog.html#free-tools">About All Tools</a>
+    <!-- INTERNAL LINKS ADDED -->
+    <a href="index.html#converterTool">Converter Tool</a>
+    <a href="index.html#resizeTool">Resizer Tool</a>    
+    <a href="index.html#borderTool">Border Tool</a>   
+    <a href="index.html#compressorTool">Compressor Tool</a>
+    <a href="index.html#faqSection">FAQ Section</a>
+    <!-- EXTERNAL LINKS -->
+    <a href="about.html">About</a>
+    <a href="contact-us.html">Contact</a>
+</div>
+        </div>
+    </div>
+
+    <!-- BLOG CONTENT -->
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Different Formats and Functions</h1>
+            <p>Understanding the technical functions and capabilities of various image formats</p>
+        </div>
+        
+        <div class="blog-content">
+            <h2>Image Format Technical Specifications</h2>
+            <p>Each image format has unique technical capabilities that make it suitable for specific applications. Understanding these functions helps in selecting the right format for your needs.</p>
+            
+            <div class="format-card">
+                <h3>JPEG/JPG Technical Functions</h3>
+                <p><strong>Compression Type:</strong> Lossy (Discrete Cosine Transform)</p>
+                <p><strong>Color Depth:</strong> 24-bit (16.7 million colors)</p>
+                <p><strong>Transparency:</strong> Not supported</p>
+                <p><strong>Animation:</strong> Not supported</p>
+                <p><strong>Metadata:</strong> EXIF, IPTC, XMP support</p>
+                <p><strong>Best Compression Quality:</strong> 80-90% for optimal quality/size balance</p>
+            </div>
+            
+            <div class="format-card">
+                <h3>PNG Technical Functions</h3>
+                <p><strong>Compression Type:</strong> Lossless (DEFLATE algorithm)</p>
+                <p><strong>Color Depth:</strong> Up to 48-bit color, 16-bit grayscale</p>
+                <p><strong>Transparency:</strong> Alpha channel support (variable transparency)</p>
+                <p><strong>Animation:</strong> APNG extension supports animation</p>
+                <p><strong>Metadata:</strong> Limited support for text metadata</p>
+                <p><strong>Interlacing:</strong> Adam7 interlacing for progressive loading</p>
+            </div>
+            
+            <div class="format-card">
+                <h3>WebP Technical Functions</h3>
+                <p><strong>Compression Type:</strong> Both lossy and lossless options</p>
+                <p><strong>Color Depth:</strong> 24-bit and 32-bit with alpha</p>
+                <p><strong>Transparency:</strong> 8-bit alpha channel (even for lossy)</p>
+                <p><strong>Animation:</strong> Supported with keyframe compression</p>
+                <p><strong>Advanced Features:</strong> Predictive coding, VP8 video format</p>
+                <p><strong>Efficiency:</strong> Typically 25-35% smaller than equivalent JPEG/PNG</p>
+            </div>
+            
+            <div class="format-card">
+                <h3>GIF Technical Functions</h3>
+                <p><strong>Compression Type:</strong> Lossless (LZW compression)</p>
+                <p><strong>Color Depth:</strong> 8-bit (256 colors maximum)</p>
+                <p><strong>Transparency:</strong> 1-bit transparency (on/off)</p>
+                <p><strong>Animation:</strong> Native support with frame delay control</p>
+                <p><strong>Palette:</strong> Global and local color tables</p>
+                <p><strong>Interlacing:</strong> Supported for progressive loading</p>
+            </div>
+            
+            <div class="format-card">
+                <h3>BMP Technical Functions</h3>
+                <p><strong>Compression Type:</strong> Typically uncompressed (optional RLE compression)</p>
+                <p><strong>Color Depth:</strong> 1-bit to 32-bit color</p>
+                <p><strong>Transparency:</strong> Alpha channel support in newer versions</p>
+                <p><strong>Animation:</strong> Not supported</p>
+                <p><strong>Structure:</strong> Bitmap file header, DIB header, color table, pixel array</p>
+                <p><strong>Platform:</strong> Primarily Windows format</p>
+            </div>
+            
+            <div class="format-card">
+                <h3>PDF Technical Functions</h3>
+                <p><strong>Content Type:</strong> Mixed content (text, vector, raster images)</p>
+                <p><strong>Compression:</strong> Multiple options (JPEG, ZIP, LZW, CCITT)</p>
+                <p><strong>Vector Support:</strong> Native vector graphics support</p>
+                <p><strong>Text Capabilities:</strong> Embedded fonts, text search and selection</p>
+                <p><strong>Interactive Features:</strong> Forms, annotations, digital signatures</p>
+                <p><strong>Security:</strong> Encryption, password protection, permission controls</p>
+            </div>
+            
+            <!-- Beautiful FAQ Section -->
+            <div class="faq-section">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What does lossless compression mean technically?<i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Lossless compression uses algorithms that preserve all original data exactly. When decompressed, the output is identical to the original input. Examples include PNG's DEFLATE algorithm and GIF's LZW compression.</p></div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How does JPEG compression work technically?<i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>JPEG uses Discrete Cosine Transform (DCT) to convert image data into frequency components, then quantizes these components, reducing less important visual information. This process is lossy but optimized for human visual perception.</p></div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What is alpha channel transparency?<i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Alpha channel transparency allows for variable transparency levels (0-100%) for each pixel. This creates smooth transitions between opaque and transparent areas, unlike 1-bit transparency which only supports fully opaque or fully transparent pixels.</p></div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Why is WebP more efficient than JPEG?<i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>WebP uses predictive coding that analyzes blocks of pixels to predict their values, then only stores the difference from the prediction. This is more efficient than JPEG's DCT method, especially for areas with similar colors.</p></div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What is color depth in image formats?<i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer"><p>Color depth refers to the number of bits used to represent each pixel's color. Higher color depth allows more colors: 8-bit = 256 colors, 24-bit = 16.7 million colors, 48-bit = 281 trillion colors.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FIXED: Back button left, Next button right in both desktop and mobile -->
+        <div class="content-nav">
+            <div class="nav-btn">
+                <a href="blog-formats-uses.html" class="btn-main">Back</a>
+                <div class="btn-topic">Uses of Different Formats</div>
+            </div>
+            
+            <div class="nav-btn">
+                <a href="image-converter-tool.html" class="btn-main">Next</a>
+                <div class="btn-topic">image converter tool</div>
+            </div>
+        </div>
+
+        <div class="blog-bottom-nav">
+            <a href="blog.html" class="bottom-btn">Guides</a>
+            <a href="index.html" class="bottom-btn">Access All Tools Now</a>
+        </div>
+    </div>
+
+   <footer>
+    <p>© 2025 jpgpdfpngconverter.com | All Rights Reserved</p>
+    
+    <!-- TOOL QUICK LINKS ADDED -->
+    <div class="legal-links" style="margin-bottom: 10px;">
+       <a href="index.html#converterTool">Converter Tool</a>
+    <a href="index.html#resizeTool">Resizer Tool</a>    
+    <a href="index.html#borderTool">Border Tool</a>   
+    <a href="index.html#compressorTool">Compressor Tool</a>
+    <a href="index.html#faqSection">FAQ Section</a>
+    </div>
+    
+    <!-- EXISTING LEGAL LINKS -->
+    <div class="legal-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="blog.html">Blog</a>  
+        <a href="blog.html#free-tools">Tools</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+    </div>
+</footer>
+
+
+
+    <script>
+        // ===== DROPDOWN MENU FUNCTIONALITY =====
+        const menuButton = document.getElementById('menuButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle dropdown menu
+        if (menuButton && dropdownMenu) {
+            menuButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                dropdownMenu.classList.remove('active');
+            });
+            
+            // Prevent dropdown from closing when clicking inside it
+            dropdownMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        // ===== SEARCH FUNCTIONALITY =====
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+
+        if (searchForm && searchInput) {
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const query = searchInput.value.trim().toLowerCase();
+                
+                if (query) {
+                    // Define search mappings to relevant pages
+                    const searchMappings = {
+                        'converter': 'image-converter-tool.html',
+                        'convert': 'image-converter-tool.html',
+                        'resize': 'image-resizer-tool.html',
+                        'resizer': 'image-resizer-tool.html',
+                        'border': 'image-border-tool.html',
+                        'frame': 'image-border-tool.html',
+                        'compress': 'image-compressor-tool.html',
+                        'compressor': 'image-compressor-tool.html',
+                        'tools': 'blog.html#free-tools',
+                        'guide': 'blog.html',
+                        'guides': 'blog.html',
+                        'about': 'about.html',
+                        'contact': 'contact-us.html',
+                        'home': 'index.html'
+                    };
+                    
+                    // Find the best matching page
+                    let targetPage = 'blog.html'; // Default page for search results
+                    
+                    for (const [keyword, page] of Object.entries(searchMappings)) {
+                        if (query.includes(keyword)) {
+                            targetPage = page;
+                            break;
+                        }
+                    }
+                    
+                    // Redirect to the relevant page
+                    window.location.href = targetPage;
+                }
+            });
+        }
+
+        // ===== BUTTON HOVER EFFECTS =====
+        document.querySelectorAll('.btn-main, .bottom-btn').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'translateY(0)';
+            });
+            
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'translateY(-1px)';
+            });
+        });
+
+        // FAQ functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+                
+                // Open clicked answer if it wasn't already active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Open first FAQ by default
+        window.addEventListener('load', () => {
+            const firstQuestion = document.querySelector('.faq-question');
+            if (firstQuestion) {
+                firstQuestion.classList.add('active');
+                firstQuestion.nextElementSibling.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
