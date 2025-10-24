@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Block direct access to .html files for clean URLs
 Disallow: /*.html$
+
 Sitemap: https://www.jpgpdfpngconverter.com/sitemap.xml
