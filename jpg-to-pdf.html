@@ -55,15 +55,15 @@
         }
 
         body {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    background: #f5f7fa;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;          /* ← ADD THIS LINE */
-    padding: 0;         /* ← ADD THIS LINE */
-}
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
 
         .header-container {
             max-width: 100%;
@@ -147,18 +147,18 @@
         }
         
         /* ==================== NEW HEADER STYLES ==================== */
-      .header-container {
-    width: 100%;
-    background-color: #2c3e50;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 0;      /* ← CHANGE 20px to 0 */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
+        .header-container {
+            width: 100%;
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
 
         /* Logo */
         .logo-container {
@@ -471,6 +471,87 @@
             margin-bottom: 10px;
         }
         
+        /* EEAT Section Styles */
+        .eeat-section {
+            background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0 30px 0;
+            border: 1px solid #e0e7ff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .eeat-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4361ee;
+        }
+        
+        .eeat-icon {
+            font-size: 2rem;
+            color: #4361ee;
+            margin-right: 15px;
+        }
+        
+        .eeat-title {
+            color: #3a0ca3;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        
+        .eeat-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .eeat-point-icon {
+            color: #4361ee;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .eeat-point-content {
+            flex: 1;
+        }
+        
+        .eeat-point-title {
+            color: #3a0ca3;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .eeat-goal {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #4361ee;
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        /* Update Date Badge */
+        .update-badge {
+            display: inline-block;
+            background: #7209b7;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
         .content-nav {
             display: flex;
             justify-content: space-between;
@@ -559,14 +640,14 @@
         
         /* Footer Styles */
         footer {
-    text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 0;       /* ← CHANGE 20px to 0 */
-    width: 100%;
-    border-radius: 0;
-}
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 0;
+            width: 100%;
+            border-radius: 0;
+        }
         
         .legal-links {
             margin-top: 10px;
@@ -594,6 +675,21 @@
                 margin: 20px;
                 padding: 25px;
                 width: calc(100% - 40px);
+            }
+            
+            .eeat-section {
+                padding: 25px;
+                margin: 30px 0 20px 0;
+            }
+            
+            .eeat-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .eeat-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
             }
             
             .content-nav {
@@ -663,6 +759,11 @@
     </div>
 
     <div class="blog-container">
+        <!-- Update Date -->
+        <div style="text-align: center;">
+            <span class="update-badge">Updated: October 25, 2025</span>
+        </div>
+        
         <!-- A. Hero Section -->
         <div class="hero-section">
             <h1>How to Convert a JPG to a PDF in Seconds: Your Free Online Converter</h1>
@@ -714,7 +815,7 @@
                 <li>Click on <strong>"File"</strong> in the menu bar, then select <strong>"Export as PDF..."</strong></li>
                 <li>Choose your desired filename and location, then click <strong>"Save."</strong></li>
             </ul>
-            <p class="why-better">Why our tool is better: We streamline this process into a single action without needing to open an application, providing a universal solution that works identically on your Mac, iPhone, or even a friend’s PC — and even handles multiple images in one go, creating separate PDFs instantly.</p>
+            <p class="why-better">Why our tool is better: We streamline this process into a single action without needing to open an application, providing a universal solution that works identically on your Mac, iPhone, or even a friend's PC — and even handles multiple images in one go, creating separate PDFs instantly.</p>
         </div>
         
         <div class="platform-guide">
@@ -729,7 +830,7 @@
         
         <!-- D. Convert Multiple Images at Once -->
         <h2>Batch Convert JPG to PDF: Convert Multiple Images at Once</h2>
-        <p>Have a stack of photos or documents? Our <strong>Batch Convert JPG to PDF</strong> feature is the perfect solution. Select multiple JPG images at once, and our tool will instantly convert each image into a high-quality PDF — fast, reliable, and secure. It’s ideal for JPG to PDF 여러 장 (multiple sheets), helping you turn scanned pages, receipts, or pictures into organized portable documents effortlessly.</p>
+        <p>Have a stack of photos or documents? Our <strong>Batch Convert JPG to PDF</strong> feature is the perfect solution. Select multiple JPG images at once, and our tool will instantly convert each image into a high-quality PDF — fast, reliable, and secure. It's ideal for JPG to PDF 여러 장 (multiple sheets), helping you turn scanned pages, receipts, or pictures into organized portable documents effortlessly.</p>
         
         <!-- E. Frequently Asked Questions (FAQ) -->
         <h2>Frequently Asked Questions (FAQ)</h2>
@@ -759,11 +860,65 @@
             <p>No, you do not. Our tool is completely free to use without any registration, sign-up, or login required. We believe in providing instant access to the tools you need.</p>
         </div>
         
-		 <div class="faq-item">
+        <div class="faq-item">
             <div class="faq-question">Q6: Do I need to install any software to use your tools?</div>
-            <p>No installation is required. All our tools work directly in your web browser. They’re developed by experienced web professionals who focus on reliability, privacy, and ease of use — giving you fast, secure performance without any downloads.</p>
+            <p>No installation is required. All our tools work directly in your web browser. They're developed by experienced web professionals who focus on reliability, privacy, and ease of use — giving you fast, secure performance without any downloads.</p>
         </div>
-		
+        
+        <!-- EEAT Section -->
+        <div class="eeat-section">
+            <div class="eeat-header">
+                <div class="eeat-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2 class="eeat-title">Trust, Security & E-E-A-T Commitment</h2>
+            </div>
+            
+            <div class="eeat-point">
+                <div class="eeat-point-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="eeat-point-content">
+                    <div class="eeat-point-title">No Uploads, No Storage</div>
+                    <p>Your images are <strong>never uploaded to any server</strong> and are not stored or saved anywhere online. All processing happens <strong>directly and securely in your browser</strong> using modern <strong>Blob-based technology</strong> — ensuring that your data never leaves your computer.</p>
+                </div>
+            </div>
+            
+            <div class="eeat-point">
+                <div class="eeat-point-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="eeat-point-content">
+                    <div class="eeat-point-title">Automatic Deletion</div>
+                    <p>Any temporary data created during conversion is <strong>automatically deleted</strong> when you <strong>close or refresh the browser tab</strong>, guaranteeing complete privacy every time you use our tools.</p>
+                </div>
+            </div>
+            
+            <div class="eeat-point">
+                <div class="eeat-point-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="eeat-point-content">
+                    <div class="eeat-point-title">Expert Development & Quality</div>
+                    <p>Our tools are built using <strong>industry-standard security protocols</strong> and developed following <strong>web security best practices</strong>. Each feature undergoes rigorous testing for <strong>speed, performance, and output quality</strong> to ensure consistent, professional results across all devices.</p>
+                </div>
+            </div>
+            
+            <div class="eeat-point">
+                <div class="eeat-point-icon">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <div class="eeat-point-content">
+                    <div class="eeat-point-title">Continuous Security & Updates</div>
+                    <p>We maintain <strong>continuous security monitoring</strong> and built our platform with <strong>privacy-by-design principles</strong>. Our tools receive <strong>regular updates</strong> to ensure optimal security and compatibility with the latest browser technologies.</p>
+                </div>
+            </div>
+            
+            <div class="eeat-goal">
+                <strong>Our Goal:</strong> To make <strong>image conversion, compression, resizing, and border editing</strong> completely <strong>secure, private, and effortless</strong> for everyone.
+            </div>
+        </div>
+        
         <!-- Navigation Buttons -->
         <div class="content-nav">
             <div class="nav-btn">
