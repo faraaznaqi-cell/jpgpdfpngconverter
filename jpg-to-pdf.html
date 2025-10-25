@@ -518,12 +518,11 @@
                 width: 280px;
             }
 
-   .blog-container {
-        margin: 15px 10px;
-        padding: 30px 20px;    
-        width: calc(100% - 20px);
-    }
-
+            .blog-container {
+                margin: 20px 15px;
+                padding: 25px 20px;
+                width: calc(100% - 30px);
+            }
 
             h1 {
                 font-size: 1.8rem;
@@ -584,60 +583,59 @@
                 font-size: 0.8rem;
             }
         }
-		@media (max-width: 768px) {
-  body {
-    padding: 0 15px; /* mobile view ke liye left-right spacing */
-  }
-  .blog-container {
-    margin: 20px auto;
-    padding: 25px 20px;
-    border-radius: 12px;
-  }
-  .cta-button {
-    width: auto;
-    padding: 12px 25px;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 0 12px; /* chhoti screen ke liye thoda kam padding */
-  }
-  .cta-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-}
+    
+/* ===== FINAL MOBILE CENTER FIX ===== */
 @media (max-width: 768px) {
   .blog-container {
     margin: 20px auto;
-    padding: 25px 15px;
-    width: calc(100% - 30px); /* left-right thoda space ads ke liye */
+    padding: 25px 18px;
+    width: auto;
+    max-width: 95%;
     border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: left;
   }
 
   .cta-button {
+    display: inline-block;
     width: auto;
-    padding: 12px 25px;
-    max-width: 90%;
+    max-width: 85%;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border-radius: 40px;
+    white-space: normal;
+    margin: 0 auto;
+  }
+
+  .hero-section {
+    padding: 0 5px 25px 5px;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .blog-container {
     margin: 15px auto;
-    padding: 20px 12px;
-    width: calc(100% - 24px);
+    padding: 20px 15px;
+    width: auto;
+    max-width: 92%;
+    text-align: left;
   }
 
   .cta-button {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 0.95rem;
+    padding: 9px 20px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-section {
+    padding: 0 5px 20px 5px;
+    text-align: center;
   }
 }
 
-    </style>
+</style>
 </head>
 <body>
     <!-- Header -->
