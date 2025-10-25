@@ -518,11 +518,12 @@
                 width: 280px;
             }
 
-            .blog-container {
-                margin: 20px 15px;
-                padding: 25px 20px;
-                width: calc(100% - 30px);
-            }
+   .blog-container {
+        margin: 15px 10px;
+        padding: 30px 20px;    
+        width: calc(100% - 20px);
+    }
+
 
             h1 {
                 font-size: 1.8rem;
@@ -583,6 +584,32 @@
                 font-size: 0.8rem;
             }
         }
+		@media (max-width: 768px) {
+  body {
+    padding: 0 15px; /* mobile view ke liye left-right spacing */
+  }
+  .blog-container {
+    margin: 20px auto;
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+  .cta-button {
+    width: auto;
+    padding: 12px 25px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 12px; /* chhoti screen ke liye thoda kam padding */
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
     </style>
 </head>
 <body>
