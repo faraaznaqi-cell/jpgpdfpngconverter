@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About JPGPDFPNG Converter - Free Image Conversion, Resizing & More</title>
-  <meta name="description" content="Free online image converter for JPG, PNG, PDF, WebP, GIF, BMP formats. Resize, compress, add borders instantly. Batch process 10+ files securely in browser.">
+  <meta name="description" content="Free online image converter for JPG, PNG, PDF, WebP, GIF, BMP formats. Resize, compress, add borders instantly. Batch process 10 files securely in browser.">
   <link rel="canonical" href="https://www.jpgpdfpngconverter.com/about" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="About JPGPDFPNG Converter - Free Image Conversion, Resizing & More">
-  <meta property="og:description" content="Free online image converter for JPG, PNG, PDF, WebP, GIF, BMP formats. Resize, compress, add borders instantly. Batch process 10+ files securely in browser.">
+  <meta property="og:description" content="Free online image converter for JPG, PNG, PDF, WebP, GIF, BMP formats. Resize, compress, add borders instantly. Batch process 10 files securely in browser.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jpgpdfpngconverter.com/about">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About JPGPDFPNG Converter - Free Image Conversion, Resizing & More">
-  <meta name="twitter:description" content="Free online image converter for JPG, PNG, PDF, WebP, GIF, BMP formats. Resize, compress, add borders instantly. Batch process 10+ files securely in browser.">
+  <meta name="twitter:description" content="Free online image converter for JPG, PNG, PDF, WebP, GIF, BMP formats. Resize, compress, add borders instantly. Batch process 10 files securely in browser.">
   
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -434,6 +434,19 @@
     font-size: 1.2rem;
   }
 
+  /* Tool Card Link Styles */
+  .tool-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .tool-card-link:hover .tool-card {
+    transform: translateY(-5px);
+    border-color: #4361ee;
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.15);
+  }
+
   /* ===== BOTTOM BUTTONS ===== */
   .blog-bottom-nav {
     display: flex;
@@ -566,11 +579,17 @@
     .tools-grid {
       grid-template-columns: 1fr;
     }
+    /* FIX FOR MOBILE BUTTONS - HORIZONTAL ALIGNMENT */
     .blog-bottom-nav {
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 60px;
       padding: 30px 20px 20px;
+    }
+    
+    .blog-bottom-nav .bottom-btn {
+      text-align: center;
+      padding: 10px 20px;
     }
   }
   @media (max-width: 480px) {
@@ -704,26 +723,34 @@
           <p>We offer four browser-based tools, all supporting single and batch processing (up to 10 files or 20 MB):</p>
           <img src="converter-screenshot.jpg" alt="JPG to PDF converter tool interface showing file upload and format options" style="margin: 20px 0; border-radius: 8px;" loading="lazy">
           <div class="tools-grid">
-            <div class="tool-card">
-              <i class="fas fa-exchange-alt"></i>
-              <h4><a href="image-converter-tool.html">Image Converter</a></h4>
-              <p>Convert between <a href="jpg-to-pdf.html">JPG, PNG, PDF</a>, WebP, GIF, BMP formats with ease.</p>
-            </div>
-            <div class="tool-card">
-              <i class="fas fa-expand-alt"></i>
-              <h4><a href="image-resizer-tool.html">Image Resizer</a></h4>
-              <p>Adjust image dimensions for single or multiple files.</p>
-            </div>
-            <div class="tool-card">
-              <i class="fas fa-compress-alt"></i>
-              <h4><a href="image-compressor-tool.html">Image Compressor</a></h4>
-              <p>Reduce file sizes while preserving quality.</p>
-            </div>
-            <div class="tool-card">
-              <i class="fas fa-border-style"></i>
-              <h4><a href="image-border-tool.html">Add Image Border</a></h4>
-              <p>Customize borders for one or many images.</p>
-            </div>
+            <a href="image-converter-tool.html" class="tool-card-link">
+              <div class="tool-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h4>Image Converter</h4>
+                <p>Convert between JPG, PNG, PDF, WebP, GIF, BMP formats with ease.</p>
+              </div>
+            </a>
+            <a href="image-resizer-tool.html" class="tool-card-link">
+              <div class="tool-card">
+                <i class="fas fa-expand-alt"></i>
+                <h4>Image Resizer</h4>
+                <p>Adjust image dimensions for single or multiple files.</p>
+              </div>
+            </a>
+            <a href="image-compressor-tool.html" class="tool-card-link">
+              <div class="tool-card">
+                <i class="fas fa-compress-alt"></i>
+                <h4>Image Compressor</h4>
+                <p>Reduce file sizes while preserving quality.</p>
+              </div>
+            </a>
+            <a href="image-border-tool.html" class="tool-card-link">
+              <div class="tool-card">
+                <i class="fas fa-border-style"></i>
+                <h4>Add Image Border</h4>
+                <p>Customize borders for one or many images.</p>
+              </div>
+            </a>
           </div>
           <p>All tools are built with <a href="https://www.adobe.com/acrobat/about-adobe-acrobat.html" target="_blank" rel="noopener">industry-standard protocols</a> for security and performance.</p>
         </div>
@@ -776,23 +803,23 @@
   </div>
 
   <!-- FOOTER -->
-<footer>
+  <footer>
     <p>© 2025 jpgpdfpngconverter.com | All Rights Reserved</p>
     <div class="legal-links" style="margin-bottom: 10px;">
-        <a href="image-converter-tool.html">Converter Tool</a>
-        <a href="image-resizer-tool.html">Resizer Tool</a>    
-        <a href="image-border-tool.html">Border Tool</a>   
-        <a href="image-compressor-tool.html">Compressor Tool</a>
-        <a href="index.html#faqSection">FAQ Section</a>
+      <a href="image-converter-tool.html">Converter Tool</a>
+      <a href="image-resizer-tool.html">Resizer Tool</a>    
+      <a href="image-border-tool.html">Border Tool</a>   
+      <a href="image-compressor-tool.html">Compressor Tool</a>
+      <a href="index.html#faqSection">FAQ Section</a>
     </div>
     <div class="legal-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="blog.html">Blog</a>  
-        <a href="blog.html#free-tools">Tools</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-conditions.html">Terms & Conditions</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact-us.html">Contact Us</a>
+      <a href="blog.html">Blog</a>  
+      <a href="blog.html#free-tools">Tools</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-conditions.html">Terms & Conditions</a>
     </div>
     
     <!-- SSL BADGE ADDED HERE -->
@@ -807,7 +834,7 @@
             All data processed securely in your browser • No server uploads
         </p>
     </div>
-</footer>
+  </footer>
 
   <script>
     // ===== MENU TOGGLE =====
