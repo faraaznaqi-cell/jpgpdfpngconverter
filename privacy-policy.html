@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - JPGPDFPNG Converter</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;family=Dancing+Script:wght@700&amp;display=swap" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <meta name="description" content="Privacy Policy of jpgpdfpngconverter.com. We don't collect or store images or data. All processing happens locally in your browser for 100% privacy.">
+    <title>Privacy Policy - JPGPDFPNG Converter | 100% Browser-Based Security</title>
+    <meta name="description" content="Privacy Policy for jpgpdfpngconverter.com. We don't collect, store, or process any data. All image conversion happens locally in your browser for complete privacy.">
     <link rel="canonical" href="https://www.jpgpdfpngconverter.com/privacy-policy" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy - JPGPDFPNG Converter | 100% Browser-Based Security">
+    <meta property="og:description" content="Privacy Policy for jpgpdfpngconverter.com. We don't collect, store, or process any data. All image conversion happens locally in your browser for complete privacy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jpgpdfpngconverter.com/privacy-policy">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy - JPGPDFPNG Converter | 100% Browser-Based Security">
+    <meta name="twitter:description" content="Privacy Policy for jpgpdfpngconverter.com. We don't collect, store, or process any data. All image conversion happens locally in your browser for complete privacy.">
+    
+    <!-- NEW: Enhanced Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy - JPGPDFPNG Converter",
+      "description": "Privacy policy detailing 100% browser-based processing with no data collection",
+      "url": "https://www.jpgpdfpngconverter.com/privacy-policy",
+      "lastReviewed": "2025-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "JPGPDFPNG Converter",
+        "url": "https://www.jpgpdfpngconverter.com",
+        "privacyPolicy": "https://www.jpgpdfpngconverter.com/privacy-policy"
+      },
+      "mainEntity": {
+        "@type": "PrivacyPolicy",
+        "name": "Privacy Policy",
+        "description": "No data collection policy with 100% browser-based processing"
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
@@ -17,613 +51,893 @@
     <link rel="shortcut icon" href="logo.png" type="image/png">
     
     <style>
-        /* ===== GLOBAL RESET ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        html, body {
-            overflow-x: hidden;
-            max-width: 100%;
-            width: 100%;
-            background: #f5f7fa;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        img, video, canvas {
-            max-width: 100%;
-            height: auto;
-        }
+    /* ===== GLOBAL RESET ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
+        background: #f8fafc;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    img, video, canvas {
+        max-width: 100%;
+        height: auto;
+    }
 
-        /* ===== HEADER STYLES ===== */
+    /* ===== HEADER ===== */
+    .header-container {
+        width: 100%;
+        background-color: #2c3e50;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+        margin-left: 15%;
+    }
+    
+    .header-logo {
+        height: 90px;
+        width: auto;
+    }
+    
+    .search-container {
+        flex: 1;
+        max-width: 500px;
+        margin: 0 20px;
+        position: relative;
+    }
+    
+    .search-form {
+        display: flex;
+        width: 100%;
+    }
+    
+    .search-input {
+        flex: 1;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 25px 0 0 25px;
+        font-size: 1rem;
+        outline: none;
+        background: white;
+    }
+    
+    .search-button {
+        background-color: #4361ee;
+        color: white;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    
+    .search-button:hover {
+        background-color: #3a56d4;
+    }
+    
+    .menu-container {
+        position: relative;
+        margin-right: 15%;
+    }
+    
+    .menu-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .menu-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        min-width: 220px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px 0;
+        display: none;
+        z-index: 1003;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .dropdown-menu.active {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #333;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .dropdown-menu a:hover {
+        background-color: #4361ee;
+        color: white;
+    }
+
+    /* ===== PAGE CONTENT ===== */
+    .page-content {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .policy-container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 50px;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+
+    /* Hero Section */
+    .policy-hero {
+        background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+        color: white;
+        padding: 50px 40px;
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 40px;
+    }
+    
+    .policy-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    
+    .policy-hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* NEW: Zero Data Collection Highlight */
+    .zero-data-highlight {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        margin: 40px 0;
+        text-align: center;
+    }
+    
+    .zero-data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .zero-data-item {
+        background: rgba(255,255,255,0.15);
+        padding: 25px 15px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .zero-data-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+    }
+    
+    .zero-data-label {
+        font-size: 1rem;
+        opacity: 0.95;
+        font-weight: 500;
+    }
+
+    /* Content Sections */
+    .content-section {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    
+    .section-title i {
+        color: #4361ee;
+        font-size: 1.6rem;
+    }
+    
+    .section-content {
+        color: #475569;
+        line-height: 1.7;
+        font-size: 1.1rem;
+    }
+    
+    .section-content p {
+        margin-bottom: 20px;
+    }
+    
+    .section-content ul {
+        list-style: none;
+        margin: 20px 0;
+    }
+    
+    .section-content li {
+        padding: 10px 0;
+        padding-left: 35px;
+        position: relative;
+    }
+    
+    .section-content li:before {
+        content: '•';
+        position: absolute;
+        left: 15px;
+        color: #4361ee;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    /* Security and Notice Boxes */
+    .security-highlight {
+        background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+        border-left: 4px solid #17a2b8;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(23, 162, 184, 0.1);
+    }
+    
+    .no-data-box {
+        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+        border-left: 4px solid #28a745;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.1);
+    }
+    
+    .contact-info {
+        background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        padding: 30px;
+        border-radius: 8px;
+        margin: 30px 0;
+        border-left: 4px solid #4361ee;
+    }
+
+    /* Last Updated */
+    .last-updated {
+        text-align: center;
+        color: #64748b;
+        font-style: italic;
+        margin-bottom: 30px;
+        font-size: 1rem;
+        background: #f1f5f9;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    /* NEW: Compliance Badges */
+    .compliance-section {
+        background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        padding: 40px;
+        border-radius: 12px;
+        margin: 40px 0;
+        text-align: center;
+    }
+    
+    .compliance-badges {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .compliance-badge {
+        background: white;
+        padding: 20px 15px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .compliance-badge:hover {
+        transform: translateY(-5px);
+    }
+    
+    .compliance-badge i {
+        font-size: 2rem;
+        color: #4361ee;
+        margin-bottom: 10px;
+    }
+
+    /* Bottom Navigation */
+    .blog-bottom-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 60px;
+        padding: 40px 0 20px 0;
+        border-top: 1px solid #e2e8f0;
+    }
+    
+    .bottom-btn {
+        padding: 12px 24px;
+        background: #7209b7;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+        box-shadow: 0 4px 15px rgba(114, 9, 183, 0.3);
+    }
+    
+    .bottom-btn:hover {
+        background: #5a08a1;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(90, 8, 161, 0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        text-align: center;
+        padding: 30px 20px;
+        background: #2c3e50;
+        color: white;
+        width: 100%;
+        margin-top: auto;
+    }
+    
+    .legal-links {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .legal-links a {
+        color: #ecf0f1;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    .legal-links a:hover {
+        color: #7209b7;
+        text-decoration: underline;
+    }
+
+    /* SSL Badge */
+    .ssl-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #28a745, #20c997);
+        border-radius: 25px;
+        border: 2px solid #fff;
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        margin: 20px 0 10px 0;
+    }
+    
+    .ssl-badge i {
+        color: white;
+        font-size: 1.4rem;
+    }
+    
+    .ssl-badge span {
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    /* ===== MOBILE RESPONSIVENESS ===== */
+    @media (max-width: 768px) {
         .header-container {
-            width: 100%;
-            background-color: #2c3e50;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        /* Logo */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            margin-left: 15%;
-        }
-
-        .header-logo {
-            height: 90px;
-            width: auto;
-        }
-
-        /* Search Bar */
-        .search-container {
-            flex: 1;
-            max-width: 500px;
-            margin: 0 20px;
-            position: relative;
-        }
-
-        .search-form {
-            display: flex;
-            width: 100%;
-        }
-
-        .search-input {
-            flex: 1;
+            flex-wrap: wrap;
             padding: 10px 15px;
-            border: none;
-            border-radius: 25px 0 0 25px;
-            font-size: 1rem;
-            outline: none;
-            background: white;
         }
-
+        
+        .logo-container {
+            flex: 1;
+            margin-left: 0;
+        }
+        
+        .header-logo {
+            height: 60px;
+        }
+        
+        .search-container {
+            order: 3;
+            max-width: 100%;
+            margin: 15px 0 0 0;
+            flex: 0 0 100%;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+        
+        .search-form {
+            width: 100%;
+            min-width: 100%;
+        }
+        
+        .search-input {
+            min-width: 0;
+            flex: 1;
+            width: 100%;
+        }
+        
         .search-button {
-            background-color: #4361ee;
-            color: white;
-            border: none;
-            border-radius: 0 25px 25px 0;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
+            flex-shrink: 0;
+            padding: 10px 15px;
         }
-
-        .search-button:hover {
-            background-color: #3a56d4;
-        }
-
-        /* Menu Button */
+        
         .menu-container {
-            position: relative;
-            margin-right: 15%;
+            margin-right: 0;
         }
-
-        .menu-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* ===== DROPDOWN MENU - FIXED ===== */
+        
         .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            left: auto;
             background: white;
-            min-width: 220px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 250px;
             border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             padding: 10px 0;
             display: none;
-            z-index: 1003;
-            border: 1px solid #e0e0e0;
-        }
-
-        .dropdown-menu.active {
-            display: block;
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 10px 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #4361ee;
-            color: white;
-        }
-
-        /* ===== PAGE CONTENT ===== */
-        .page-content {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            z-index: 99999;
+            border: 1px solid #ddd;
+            max-width: none;
         }
         
         .policy-container {
-            max-width: 800px;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: 100%;
+            padding: 30px 25px;
         }
         
-        h1 {
-            color: #3a0ca3;
-            margin-bottom: 30px;
-            text-align: center;
+        .policy-hero {
+            padding: 40px 25px;
+        }
+        
+        .policy-hero h1 {
             font-size: 2.2rem;
         }
         
-        h2 {
-            color: #4361ee;
-            margin: 25px 0 15px 0;
-            font-size: 1.5rem;
-        }
-        
-        h3 {
-            color: #7209b7;
-            margin: 20px 0 10px 0;
-            font-size: 1.2rem;
-        }
-        
-        p, li {
-            margin-bottom: 15px;
-            line-height: 1.6;
+        .policy-hero p {
             font-size: 1.1rem;
         }
         
-        ul {
-            margin-left: 30px;
-            margin-bottom: 20px;
+        .zero-data-grid {
+            grid-template-columns: 1fr;
         }
         
-        .last-updated {
-            text-align: center;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
+        .compliance-badges {
+            grid-template-columns: repeat(2, 1fr);
         }
         
-        .contact-info {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
+        .section-title {
+            font-size: 1.5rem;
         }
-
-        /* ===== BOTTOM BUTTONS ===== */
+        
         .blog-bottom-nav {
-            display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .bottom-btn {
-            padding: 8px 16px;
-            background: #7209b7;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(114, 9, 183, 0.2);
-            font-size: 0.85rem;
-        }
-        
-        .bottom-btn:hover {
-            background: #5a08a1;
-            transform: translateY(-1px);
-            box-shadow: 0 3px 6px rgba(90, 8, 161, 0.25);
-        }
-        
-        /* ===== FOOTER STYLES ===== */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            width: 100%;
-            margin-top: auto;
+            padding: 30px 0 20px;
         }
         
         .legal-links {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .policy-container {
+            padding: 25px 20px;
         }
         
-        .legal-links a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
+        .policy-hero h1 {
+            font-size: 1.8rem;
         }
         
-        .legal-links a:hover {
-            color: #7209b7;
-            text-decoration: underline;
+        .section-title {
+            font-size: 1.3rem;
         }
-
-        /* ===== MOBILE RESPONSIVENESS ===== */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-wrap: wrap;
-                padding: 10px 15px;
-            }
-            
-            .logo-container {
-                flex: 1;
-                margin-left: 0;
-            }
-            
-            .header-logo {
-                height: 60px;
-            }
-            
-            .search-container {
-                order: 3;
-                max-width: 100%;
-                margin: 15px 0 0 0;
-                flex: 0 0 100%;
-                padding: 0 5px;
-                box-sizing: border-box;
-            }
-            
-            .search-form {
-                width: 100%;
-                min-width: 100%;
-            }
-            
-            .search-input {
-                min-width: 0;
-                flex: 1;
-                width: 100%;
-            }
-            
-            .search-button {
-                flex-shrink: 0;
-                padding: 10px 15px;
-            }
-            
-            .menu-container {
-                margin-right: 0;
-            }
-            
-            /* MOBILE DROPDOWN FIX */
-            .dropdown-menu {
-                position: fixed;
-                top: 80px;
-                right: 20px;
-                left: auto;
-                background: white;
-                width: 250px;
-                border-radius: 8px;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-                padding: 10px 0;
-                display: none;
-                z-index: 99999;
-                border: 1px solid #ddd;
-                max-width: none;
-            }
-            
-            .policy-container {
-                padding: 25px;
-            }
-            
-            .blog-bottom-nav {
-                flex-wrap: wrap;
-            }
-            
-            .legal-links {
-                flex-direction: row;
-                gap: 12px;
-            }
+        
+        .section-content {
+            font-size: 1rem;
         }
-
-        @media (max-width: 480px) {
-            .header-container {
-                padding: 8px 5px;
-            }
-            
-            .search-container {
-                margin: 10px 0 0 0;
-            }
-            
-            .search-input {
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-            
-            .search-button {
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-            
-            .dropdown-menu {
-                right: 10px;
-                width: calc(100vw - 20px);
-                max-width: 280px;
-            }
+        
+        .compliance-badges {
+            grid-template-columns: 1fr;
         }
+    }
     </style>
 </head>
 <body>
     <!-- HEADER -->
     <div class="header-container">
-        <!-- Logo on the left -->
         <div class="logo-container">
-            <img src="logo.png" alt="Jpgpdfpngconverter Logo" class="header-logo">
+            <img src="logo.png" alt="Jpgpdfpngconverter Logo" class="header-logo" loading="lazy">
         </div>
-        
-        <!-- Search Bar in the center -->
         <div class="search-container">
             <form class="search-form" id="searchForm">
                 <input type="text" class="search-input" placeholder="Search tools and guides..." id="searchInput">
-                <button type="submit" class="search-button">
-                    <i class="fas fa-search"></i>
-                </button>
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        
-         <!-- Menu Button on the right -->
         <div class="menu-container">
             <button class="menu-button" id="menuButton">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="dropdown-menu" id="dropdownMenu">
-    <a href="index.html">Home</a>
-    <a href="blog.html">How-To-Guides</a>
-    <a href="blog.html#free-tools">About All Tools</a>
-    <!-- INTERNAL LINKS ADDED -->
-    <a href="index.html#converterTool">Converter Tool</a>
-    <a href="index.html#resizeTool">Resizer Tool</a>    
-    <a href="index.html#borderTool">Border Tool</a>   
-    <a href="index.html#compressorTool">Compressor Tool</a>
-    <a href="index.html#faqSection">FAQ Section</a>
-    <!-- EXTERNAL LINKS -->
-    <a href="about.html">About</a>
-    <a href="contact-us.html">Contact</a>
-</div>
+                <a href="index.html">Home</a>
+                <a href="blog.html">How-To-Guides</a>
+                <a href="blog.html#free-tools">About All Tools</a>
+                <!-- INTERNAL LINKS ADDED -->
+                <a href="index.html#converterTool">Converter Tool</a>
+                <a href="index.html#resizeTool">Resizer Tool</a>    
+                <a href="index.html#borderTool">Border Tool</a>   
+                <a href="index.html#compressorTool">Compressor Tool</a>
+                <a href="index.html#faqSection">FAQ Section</a>
+                <!-- EXTERNAL LINKS -->
+                <a href="about.html">About</a>
+                <a href="contact-us.html">Contact</a>
+            </div>
         </div>
     </div>
 
     <!-- PAGE CONTENT -->
     <div class="page-content">
         <div class="policy-container">
-            <h1>Privacy Policy</h1>
+            <!-- Hero Section -->
+            <div class="policy-hero">
+                <h1><i class="fas fa-user-shield"></i> Privacy Policy</h1>
+                <p>100% Browser-Based Processing • Zero Data Collection • Complete Privacy</p>
+            </div>
+
             <p class="last-updated">Last Updated: January 1, 2025</p>
-            
-            <h2>1. Introduction</h2>
-            <p>Welcome to jpgpdfpngconverter.com ("Website", "Service", "we", "our", "us"). This Privacy Policy explains how we handle your information when you use our online image conversion tools.</p>
-            <p>By using our Website, you agree to the terms outlined in this Privacy Policy.</p>
-            
-            <h2>2. No Data Collection Policy</h2>
-            <p><strong>We want to be perfectly clear: We do not collect, store, or process any personal data, images, or files on our servers.</strong></p>
-            
-            <h3>2.1 What We Don't Collect:</h3>
-            <ul>
-                <li><strong>Personal Information:</strong> Name, email address, phone number, location data</li>
-                <li><strong>Uploaded Files:</strong> Images, PDFs, or any files you process through our tools</li>
-                <li><strong>Browsing Data:</strong> IP addresses, browser history, cookies for tracking</li>
-                <li><strong>Usage Data:</strong> How you use our tools, which features you access</li>
-                <li><strong>Device Information:</strong> Device type, operating system, browser type</li>
-            </ul>
-            
-            <h2>3. How Our Service Works</h2>
-            <p>Our image conversion tools operate entirely within your web browser using client-side technologies:</p>
-            <ul>
-                <li>All file processing happens locally on your device</li>
-                <li>No data is transmitted to our servers or third-party servers</li>
-                <li>Files are processed in your browser's memory and deleted when you close the tab</li>
-                <li>We use only open-source client-side libraries (PDF-lib, FileSaver.js)</li>
-            </ul>
-            
-            <h2>4. Third-Party Services</h2>
-            <p>We use the following third-party services that operate entirely client-side:</p>
-            <ul>
-                <li><strong>Google Fonts:</strong> For font display (no user data collection)</li>
-                <li><strong>Font Awesome:</strong> For icons (no user data collection)</li>
-                <li><strong>CDN Libraries:</strong> For JavaScript functionality (local processing only)</li>
-            </ul>
-            
-            <h2>5. Cookies and Tracking</h2>
-            <p>We do not use cookies, web beacons, or any tracking technologies. Our Website does not:</p>
-            <ul>
-                <li>Set any cookies on your device</li>
-                <li>Use local storage or session storage</li>
-                <li>Employ any analytics or tracking scripts</li>
-                <li>Display third-party advertisements</li>
-            </ul>
-            
-            <h2>6. Children's Privacy</h2>
-            <p>Our Service is suitable for users of all ages. Since we do not collect any personal information, we are compliant with children's privacy regulations including COPPA.</p>
-            
-            <h2>7. Data Security</h2>
-            <p>Since no data leaves your device, your information remains secure. However, we recommend:</p>
-            <ul>
-                <li>Using updated browsers with security features enabled</li>
-                <li>Avoiding processing sensitive or confidential documents on public computers</li>
-                <li>Keeping your antivirus software updated</li>
-            </ul>
-            
-            <h2>8. Your Rights</h2>
-            <p>Since we don't collect your data, you don't need to exercise data rights such as:</p>
-            <ul>
-                <li>Right to access (we have no data to access)</li>
-                <li>Right to deletion (we have no data to delete)</li>
-                <li>Right to rectification (we have no data to correct)</li>
-                <li>Right to data portability (we have no data to transfer)</li>
-            </ul>
-            
-            <h2>9. International Data Transfers</h2>
-            <p>No data is transferred internationally because no data is collected or stored on our servers.</p>
-            
-            <h2>10. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy occasionally. Changes will be posted on this page with updated "Last Updated" date.</p>
-            
-            <h2>11. Contact Information</h2>
-            <div class="contact-info">
-                <p><strong>For privacy-related inquiries:</strong></p>
-                <p>Email: faraaznaqi@gmail.com</p>
-                <p>We typically respond within 24-48 hours.</p>
+
+            <!-- NEW: Zero Data Collection Highlight -->
+            <div class="zero-data-highlight">
+                <h2 style="color: white; margin-bottom: 10px;"><i class="fas fa-ban"></i> Zero Data Collection Guarantee</h2>
+                <p style="color: white; opacity: 0.95; margin-bottom: 20px;">We don't collect, store, or process any personal data. Everything happens locally in your browser.</p>
+                <div class="zero-data-grid">
+                    <div class="zero-data-item">
+                        <i class="fas fa-file-upload zero-data-icon"></i>
+                        <span class="zero-data-label">No File Uploads</span>
+                    </div>
+                    <div class="zero-data-item">
+                        <i class="fas fa-database zero-data-icon"></i>
+                        <span class="zero-data-label">No Data Storage</span>
+                    </div>
+                    <div class="zero-data-item">
+                        <i class="fas fa-cookie zero-data-icon"></i>
+                        <span class="zero-data-label">No Tracking Cookies</span>
+                    </div>
+                    <div class="zero-data-item">
+                        <i class="fas fa-server zero-data-icon"></i>
+                        <span class="zero-data-label">No Server Processing</span>
+                    </div>
+                </div>
             </div>
             
-            <h2>12. Legal Compliance</h2>
-            <p>Our no-data-collection approach makes us compliant with:</p>
-            <ul>
-                <li>GDPR (General Data Protection Regulation)</li>
-                <li>CCPA (California Consumer Privacy Act)</li>
-                <li>PIPEDA (Canada)</li>
-                <li>Other international privacy laws</li>
-            </ul>
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                <div class="section-content">
+                    <p>Welcome to jpgpdfpngconverter.com ("Website", "Service", "we", "our", "us"). This Privacy Policy explains how we handle your information when you use our online image conversion tools.</p>
+                    <p>By using our Website, you agree to the terms outlined in this Privacy Policy.</p>
+                    <div class="security-highlight">
+                        <strong><i class="fas fa-shield-alt"></i> Key Privacy Feature:</strong> All image processing happens locally in your browser using Blob technology. No files are uploaded to our servers.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-ban"></i> 2. No Data Collection Policy</h2>
+                <div class="section-content">
+                    <div class="no-data-box">
+                        <p><strong><i class="fas fa-exclamation-triangle"></i> We want to be perfectly clear: We do not collect, store, or process any personal data, images, or files on our servers.</strong></p>
+                    </div>
+                    
+                    <h3 style="color: #3a0ca3; margin: 25px 0 15px 0;">2.1 What We Don't Collect:</h3>
+                    <ul>
+                        <li><strong>Personal Information:</strong> Name, email address, phone number, location data</li>
+                        <li><strong>Uploaded Files:</strong> Images, PDFs, or any files you process through our tools</li>
+                        <li><strong>Browsing Data:</strong> IP addresses, browser history, cookies for tracking</li>
+                        <li><strong>Usage Data:</strong> How you use our tools, which features you access</li>
+                        <li><strong>Device Information:</strong> Device type, operating system, browser type</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> 3. How Our Service Works</h2>
+                <div class="section-content">
+                    <p>Our image conversion tools operate entirely within your web browser using client-side technologies:</p>
+                    <ul>
+                        <li>All file processing happens locally on your device</li>
+                        <li>No data is transmitted to our servers or third-party servers</li>
+                        <li>Files are processed in your browser's memory and deleted when you close the tab</li>
+                        <li>We use only open-source client-side libraries (PDF-lib, FileSaver.js)</li>
+                        <li>Batch processing for up to 10 files happens entirely in your browser</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-external-link-alt"></i> 4. Third-Party Services</h2>
+                <div class="section-content">
+                    <p>We use the following third-party services that operate entirely client-side:</p>
+                    <ul>
+                        <li><strong>Google Fonts:</strong> For font display (no user data collection)</li>
+                        <li><strong>Font Awesome:</strong> For icons (no user data collection)</li>
+                        <li><strong>CDN Libraries:</strong> For JavaScript functionality (local processing only)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-cookie"></i> 5. Cookies and Tracking</h2>
+                <div class="section-content">
+                    <p>We do not use cookies, web beacons, or any tracking technologies. Our Website does not:</p>
+                    <ul>
+                        <li>Set any cookies on your device</li>
+                        <li>Use local storage or session storage</li>
+                        <li>Employ any analytics or tracking scripts</li>
+                        <li>Display third-party advertisements</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-child"></i> 6. Children's Privacy</h2>
+                <div class="section-content">
+                    <p>Our Service is suitable for users of all ages. Since we do not collect any personal information, we are compliant with children's privacy regulations including COPPA.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-lock"></i> 7. Data Security</h2>
+                <div class="section-content">
+                    <p>Since no data leaves your device, your information remains secure. However, we recommend:</p>
+                    <ul>
+                        <li>Using updated browsers with security features enabled</li>
+                        <li>Avoiding processing sensitive or confidential documents on public computers</li>
+                        <li>Keeping your antivirus software updated</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-user-check"></i> 8. Your Rights</h2>
+                <div class="section-content">
+                    <p>Since we don't collect your data, you don't need to exercise data rights such as:</p>
+                    <ul>
+                        <li>Right to access (we have no data to access)</li>
+                        <li>Right to deletion (we have no data to delete)</li>
+                        <li>Right to rectification (we have no data to correct)</li>
+                        <li>Right to data portability (we have no data to transfer)</li>
+                    </ul>
+                </div>
+            </div>
 
-            <!-- Button Navigation -->
+            <!-- NEW: Compliance Section -->
+            <div class="compliance-section">
+                <h2 style="color: #1e293b; margin-bottom: 10px;"><i class="fas fa-gavel"></i> Global Privacy Compliance</h2>
+                <p style="color: #475569; margin-bottom: 20px;">Our zero-data-collection approach ensures compliance with international privacy laws</p>
+                <div class="compliance-badges">
+                    <div class="compliance-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>GDPR Compliant</h4>
+                        <p>European Union</p>
+                    </div>
+                    <div class="compliance-badge">
+                        <i class="fas fa-flag-usa"></i>
+                        <h4>CCPA Compliant</h4>
+                        <p>California, USA</p>
+                    </div>
+                    <div class="compliance-badge">
+                        <i class="fas fa-maple-leaf"></i>
+                        <h4>PIPEDA Compliant</h4>
+                        <p>Canada</p>
+                    </div>
+                    <div class="compliance-badge">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4>Global Standards</h4>
+                        <p>Worldwide</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-exchange-alt"></i> 9. International Data Transfers</h2>
+                <div class="section-content">
+                    <p>No data is transferred internationally because no data is collected or stored on our servers.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-sync-alt"></i> 10. Changes to This Policy</h2>
+                <div class="section-content">
+                    <p>We may update this Privacy Policy occasionally. Changes will be posted on this page with updated "Last Updated" date.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-envelope"></i> 11. Contact Information</h2>
+                <div class="section-content">
+                    <div class="contact-info">
+                        <p><strong><i class="fas fa-headset"></i> For privacy-related inquiries:</strong></p>
+                        <p>Email: <strong>faraaznaqi@gmail.com</strong></p>
+                        <p>We typically respond within 24-48 hours.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title"><i class="fas fa-balance-scale"></i> 12. Legal Compliance</h2>
+                <div class="section-content">
+                    <p>Our no-data-collection approach makes us compliant with:</p>
+                    <ul>
+                        <li>GDPR (General Data Protection Regulation)</li>
+                        <li>CCPA (California Consumer Privacy Act)</li>
+                        <li>PIPEDA (Canada)</li>
+                        <li>Other international privacy laws</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
             <div class="blog-bottom-nav">
-                <a href="blog.html" class="bottom-btn">Guides</a>
-                <a href="index.html" class="bottom-btn">Access All Tools Now</a>
+                <a href="blog.html" class="bottom-btn"><i class="fas fa-book"></i> How-To Guides</a>
+                <a href="index.html" class="bottom-btn"><i class="fas fa-tools"></i> Access All Tools</a>
+                <a href="terms-conditions.html" class="bottom-btn"><i class="fas fa-scale-balanced"></i> Terms & Conditions</a>
             </div>
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
-    <p>© 2025 jpgpdfpngconverter.com | All Rights Reserved</p>
-    
-    <!-- TOOL QUICK LINKS ADDED -->
-    <div class="legal-links" style="margin-bottom: 10px;">
-       <a href="index.html#converterTool">Converter Tool</a>
-    <a href="index.html#resizeTool">Resizer Tool</a>    
-    <a href="index.html#borderTool">Border Tool</a>   
-    <a href="index.html#compressorTool">Compressor Tool</a>
-    <a href="index.html#faqSection">FAQ Section</a>
-    </div>
-    
-    <!-- EXISTING LEGAL LINKS -->
-    <div class="legal-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="blog.html">Blog</a>  
-        <a href="blog.html#free-tools">Tools</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-conditions.html">Terms & Conditions</a>
-    </div>
-</footer>
-
-
+        <p>© 2025 jpgpdfpngconverter.com | All Rights Reserved</p>
+        
+        <!-- TOOL QUICK LINKS -->
+        <div class="legal-links" style="margin-bottom: 10px;">
+            <a href="index.html#converterTool">Converter Tool</a>
+            <a href="index.html#resizeTool">Resizer Tool</a>    
+            <a href="index.html#borderTool">Border Tool</a>   
+            <a href="index.html#compressorTool">Compressor Tool</a>
+            <a href="index.html#faqSection">FAQ Section</a>
+        </div>
+        
+        <!-- LEGAL LINKS -->
+        <div class="legal-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="blog.html">Blog</a>  
+            <a href="blog.html#free-tools">Tools</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-conditions.html">Terms & Conditions</a>
+        </div>
+        
+        <!-- SSL BADGE -->
+        <div style="text-align: center; margin: 20px 0 10px 0; padding: 12px;">
+            <div class="ssl-badge">
+                <i class="fas fa-lock"></i>
+                <span>🔒 Secure SSL Encryption • Your Files Stay Private</span>
+            </div>
+            <p style="color: #ecf0f1; font-size: 0.8rem; margin-top: 8px; opacity: 0.9;">
+                All data processed securely in your browser • No server uploads
+            </p>
+        </div>
+    </footer>
 
     <script>
-        // ===== DROPDOWN MENU FUNCTIONALITY =====
-        const menuButton = document.getElementById('menuButton');
-        const dropdownMenu = document.getElementById('dropdownMenu');
+    // ===== MENU TOGGLE =====
+    const menuButton = document.getElementById('menuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-        // Toggle dropdown menu
-        if (menuButton && dropdownMenu) {
-            menuButton.addEventListener('click', function(e) {
-                e.stopPropagation();
-                dropdownMenu.classList.toggle('active');
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function() {
-                dropdownMenu.classList.remove('active');
-            });
-            
-            // Prevent dropdown from closing when clicking inside it
-            dropdownMenu.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
+    menuButton.addEventListener('click', e => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', () => {
+      dropdownMenu.classList.remove('active');
+    });
+
+    dropdownMenu.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+
+    // ===== SEARCH FUNCTION =====
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) return;
+
+      const searchMappings = {
+        'converter': 'index.html#converterTool',
+        'convert': 'index.html#converterTool',
+        'resize': 'index.html#resizeTool',
+        'resizer': 'index.html#resizeTool',
+        'border': 'index.html#borderTool',
+        'frame': 'index.html#borderTool',
+        'compress': 'index.html#compressorTool',
+        'compressor': 'index.html#compressorTool',
+        'tools': 'blog.html#free-tools',
+        'guide': 'blog.html',
+        'guides': 'blog.html',
+        'about': 'about.html',
+        'contact': 'contact-us.html',
+        'home': 'index.html',
+        'privacy': 'privacy-policy.html',
+        'terms': 'terms-conditions.html'
+      };
+
+      let targetPage = 'blog.html';
+      for (const [k, page] of Object.entries(searchMappings)) {
+        if (query.includes(k)) {
+          targetPage = page;
+          break;
         }
+      }
+      window.location.href = targetPage;
+    });
 
-        // ===== SEARCH FUNCTIONALITY =====
-        const searchForm = document.getElementById('searchForm');
-        const searchInput = document.getElementById('searchInput');
-
-        if (searchForm && searchInput) {
-            searchForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const query = searchInput.value.trim().toLowerCase();
-                
-                if (query) {
-                    // Define search mappings to relevant pages
-                    const searchMappings = {
-                        'converter': 'image-converter-tool.html',
-                        'convert': 'image-converter-tool.html',
-                        'resize': 'image-resizer-tool.html',
-                        'resizer': 'image-resizer-tool.html',
-                        'border': 'image-border-tool.html',
-                        'frame': 'image-border-tool.html',
-                        'compress': 'image-compressor-tool.html',
-                        'compressor': 'image-compressor-tool.html',
-                        'tools': 'blog.html#free-tools',
-                        'guide': 'blog.html',
-                        'guides': 'blog.html',
-                        'about': 'about.html',
-                        'contact': 'contact-us.html',
-                        'home': 'index.html'
-                    };
-                    
-                    // Find the best matching page
-                    let targetPage = 'blog.html'; // Default page for search results
-                    
-                    for (const [keyword, page] of Object.entries(searchMappings)) {
-                        if (query.includes(keyword)) {
-                            targetPage = page;
-                            break;
-                        }
-                    }
-                    
-                    // Redirect to the relevant page
-                    window.location.href = targetPage;
-                }
-            });
-        }
-
-        // ===== BUTTON HOVER EFFECTS =====
-        document.querySelectorAll('.bottom-btn').forEach(button => {
-            button.addEventListener('mousedown', () => {
-                button.style.transform = 'translateY(0)';
-            });
-            
-            button.addEventListener('mouseup', () => {
-                button.style.transform = 'translateY(-1px)';
-            });
-        });
+    // ===== BUTTON PRESS EFFECTS =====
+    document.querySelectorAll('.bottom-btn').forEach(btn => {
+      btn.addEventListener('mousedown', () => btn.style.transform = 'translateY(0)');
+      btn.addEventListener('mouseup', () => btn.style.transform = 'translateY(-2px)');
+    });
     </script>
 </body>
 </html>
