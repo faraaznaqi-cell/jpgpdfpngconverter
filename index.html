@@ -187,11 +187,93 @@ img, video, canvas {
     position: relative;
 }
 
+/* ===== LIGHT HEADER CONTENT STYLES ===== */
 .header-content {
-    background-color: var(--content-bar-color);
-    color: white;
-    padding: 30px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: var(--dark-color);
+    padding: 40px 20px;
     text-align: center;
+}
+
+.content-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.content-box {
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: left;
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 12px;
+}
+
+.content-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.content-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.content-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin: 10px 0;
+    padding-left: 15px;
+    border-left: 3px solid var(--success-color);
+}
+
+.content-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.content-process {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 3px solid var(--warning-color);
+    font-style: italic;
+}
+
+.content-process p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 /* Logo */
@@ -238,7 +320,7 @@ img, video, canvas {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 .search-button:hover {
@@ -259,7 +341,7 @@ img, video, canvas {
     cursor: pointer;
     padding: 5px 10px;
     border-radius: var(--border-radius);
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 .menu-button:hover {
@@ -486,6 +568,143 @@ img, video, canvas {
         font-size: 0.9rem;
     }
 }
+
+/* ===== STICKY NAVIGATION ===== */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 12px 0;
+    border-bottom: 3px solid var(--primary-color);
+    width: 100%;
+}
+
+/* Add padding to body to account for fixed nav */
+body {
+    padding-top: 80px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    min-width: 80px;
+}
+
+.nav-item i {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.nav-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.nav-item:hover i,
+.nav-item:hover span {
+    color: white;
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.back-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+}
+
+/* Mobile Responsiveness for Sticky Nav */
+@media (max-width: 768px) {
+    .nav-container {
+        gap: 10px;
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+    
+    .nav-item {
+        min-width: 70px;
+        padding: 8px 10px;
+    }
+    
+    .nav-item i {
+        font-size: 1.2rem;
+    }
+    
+    .nav-item span {
+        font-size: 0.75rem;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        gap: 5px;
+    }
+    
+    .nav-item {
+        min-width: 60px;
+        padding: 6px 8px;
+    }
+    
+    .nav-item i {
+        font-size: 1.1rem;
+    }
+    
+    .nav-item span {
+        font-size: 0.7rem;
+    }
+}
+
         .tool-section {
             background-color: white;
             border-radius: var(--border-radius);
@@ -1183,53 +1402,131 @@ img, video, canvas {
     
     <!-- Content Bar with H1 and Paragraph (SAME AS YOUR CURRENT ONE) -->
     <div class="header-content">
-        <div class="header-text">
-            <h1>Free Image Converter - Convert JPG, PNG, PDF, WebP Online</h1>
-<h2>Convert Multiple JPG to PDF Free Online</h2>
-<p>Convert multiple JPG files into one single PDF instantly. No software, no signup — just upload, click convert, and download your PDF in seconds.</p>
+    <div class="content-grid">
+        <!-- JPG to PDF Box -->
+        <div class="content-box">
+            <div class="content-header">
+                <div class="content-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3 class="content-title">Convert JPG to PDF</h3>
+            </div>
+            <p class="content-description">Convert multiple JPG files into one single PDF instantly. No software, no signup — just upload, click convert, and download your PDF in seconds.</p>
+            
+            <h4 class="content-subtitle">How to Convert JPG to PDF Online</h4>
+            <div class="content-process">
+                <p>Upload your JPG images → Select "Convert to PDF" → Click "Start Conversion" → Download your combined PDF file instantly.</p>
+            </div>
+        </div>
 
-<h3>How to Convert JPG to PDF Online</h3>
-<p>Upload your JPG images → Select “Convert to PDF” → Click “Start Conversion” → Download your combined PDF file instantly.</p>
+        <!-- PNG to JPG Box -->
+        <div class="content-box">
+            <div class="content-header">
+                <div class="content-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3 class="content-title">PNG to JPG Converter</h3>
+            </div>
+            <p class="content-description">Convert PNG images to JPG format while handling transparency. Perfect for web images that need white backgrounds or smaller file sizes.</p>
+            
+            <h4 class="content-subtitle">PNG to JPG Conversion Process</h4>
+            <div class="content-process">
+                <p>Upload PNG file → Choose JPG format → Set background options → Download converted JPG image instantly.</p>
+            </div>
+        </div>
 
-<h2>PNG to JPG Converter with Transparency Support</h2>
-<p>Convert PNG images to JPG format while handling transparency. Perfect for web images that need white backgrounds or smaller file sizes.</p>
+        <!-- WebP to PDF Box -->
+        <div class="content-box">
+            <div class="content-header">
+                <div class="content-icon">
+                    <i class="fas fa-file-image"></i>
+                </div>
+                <h3 class="content-title">WebP to PDF Converter</h3>
+            </div>
+            <p class="content-description">Convert modern WebP images to PDF documents. Maintain image quality while creating shareable PDF files from WebP format.</p>
+            
+            <h4 class="content-subtitle">WebP to PDF Conversion Steps</h4>
+            <div class="content-process">
+                <p>Select WebP images → Choose PDF output → Adjust quality settings → Download your PDF document.</p>
+            </div>
+        </div>
 
-<h3>PNG to JPG Conversion Process</h3>
-<p>Upload PNG file → Choose JPG format → Set background options → Download converted JPG image instantly.</p>
+        <!-- Image Resizer Box -->
+        <div class="content-box">
+            <div class="content-header">
+                <div class="content-icon">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </div>
+                <h3 class="content-title">Batch Image Resizer</h3>
+            </div>
+            <p class="content-description">Resize multiple images simultaneously for websites, social media, or documents. Maintain aspect ratio while adjusting dimensions.</p>
+            
+            <h4 class="content-subtitle">Batch Resize Workflow</h4>
+            <div class="content-process">
+                <p>Upload multiple images → Set target dimensions → Apply resize to all → Download resized images in ZIP file.</p>
+            </div>
+        </div>
 
-<h2>WebP to PDF Converter - Modern Format Conversion</h2>
-<p>Convert modern WebP images to PDF documents. Maintain image quality while creating shareable PDF files from WebP format.</p>
+        <!-- Image Compressor Box -->
+        <div class="content-box">
+            <div class="content-header">
+                <div class="content-icon">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </div>
+                <h3 class="content-title">Image Compressor</h3>
+            </div>
+            <p class="content-description">Compress images for faster websites, smaller emails, and efficient storage. Advanced algorithms maintain visual quality while reducing file size.</p>
+            
+            <h4 class="content-subtitle">Smart Compression Process</h4>
+            <div class="content-process">
+                <p>Upload images → Adjust compression level → Preview results → Download optimized files instantly.</p>
+            </div>
+        </div>
 
-<h3>WebP to PDF Conversion Steps</h3>
-<p>Select WebP images → Choose PDF output → Adjust quality settings → Download your PDF document.</p>
-
-<h2>Batch Image Resizer - Resize Multiple Photos</h2>
-<p>Resize multiple images simultaneously for websites, social media, or documents. Maintain aspect ratio while adjusting dimensions.</p>
-
-<h3>Batch Resize Workflow</h3>
-<p>Upload multiple images → Set target dimensions → Apply resize to all → Download resized images in ZIP file.</p>
-
-<h2>Image Compressor - Reduce File Size Without Quality Loss</h2>
-<p>Compress images for faster websites, smaller emails, and efficient storage. Advanced algorithms maintain visual quality while reducing file size.</p>
-
-<h3>Smart Compression Process</h3>
-<p>Upload images → Adjust compression level → Preview results → Download optimized files instantly.</p>
-
-<h2>Add Borders to Images Online - Custom Border Tool</h2>
-<p>Enhance images with custom borders. Choose thickness, color, and corner radius for professional-looking photos and graphics.</p>
-
-<h3>Border Customization Options</h3>
-<p>Select images → Choose border style → Adjust thickness and color → Apply borders to multiple images.</p>
-
-<h2>Why Choose Our Free Image Tools?</h2>
-<p>All-in-one platform for image conversion, resizing, compression, and editing. 100% free, secure browser-based processing with no watermarks.</p>
-
-<p>Quickly convert multiple JPG to PDF free and manage your photos with ease. Convert PNG to JPG, WebP to PDF, resize images in bulk, compress files without quality loss, and add professional borders - all in one secure platform.</p>
+        <!-- Border Tool Box -->
+        <div class="content-box">
+            <div class="content-header">
+                <div class="content-icon">
+                    <i class="fas fa-border-style"></i>
+                </div>
+                <h3 class="content-title">Add Borders to Images</h3>
+            </div>
+            <p class="content-description">Enhance images with custom borders. Choose thickness, color, and corner radius for professional-looking photos and graphics.</p>
+            
+            <h4 class="content-subtitle">Border Customization Options</h4>
+            <div class="content-process">
+                <p>Select images → Choose border style → Adjust thickness and color → Apply borders to multiple images.</p>
+            </div>
         </div>
     </div>
 </div>
 </header>
 
+<!-- Sticky Navigation Bar -->
+<div class="sticky-nav" id="stickyNav">
+    <div class="nav-container">
+        <a href="#converterTool" class="nav-item">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Converter</span>
+        </a>
+        <a href="#resizeTool" class="nav-item">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span>Resizer</span>
+        </a>
+        <a href="#borderTool" class="nav-item">
+            <i class="fas fa-border-style"></i>
+            <span>Border</span>
+        </a>
+        <a href="#compressorTool" class="nav-item">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <span>Compressor</span>
+        </a>
+        <a href="#faqSection" class="nav-item">
+            <i class="fas fa-question-circle"></i>
+            <span>FAQ</span>
+        </a>
+    </div>
+</div>
 
 <div class="container">
 
@@ -1669,6 +1966,11 @@ img, video, canvas {
 </div>
 </div>
 
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
 <footer>
     <p>© 2025 jpgpdfpngconverter.com | All Rights Reserved</p>
     
@@ -1690,6 +1992,18 @@ img, video, canvas {
         <a href="blog.html#free-tools">Tools</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-conditions.html">Terms & Conditions</a>
+    </div>
+	 <!-- SSL BADGE ADDED HERE -->
+    <div style="text-align: center; margin: 20px 0 10px 0; padding: 12px;">
+        <div style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 20px; background: linear-gradient(135deg, #28a745, #20c997); border-radius: 25px; border: 2px solid #fff; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);">
+            <i class="fas fa-lock" style="color: white; font-size: 1.4rem;"></i>
+            <span style="color: white; font-weight: 600; font-size: 1rem;">
+                🔒 Secure SSL Encryption • Your Files Stay Private
+            </span>
+        </div>
+        <p style="color: #ecf0f1; font-size: 0.8rem; margin-top: 8px; opacity: 0.9;">
+            All data processed securely in your browser • No server uploads
+        </p>
     </div>
 	<script type="application/ld+json">
 {
@@ -2098,6 +2412,47 @@ img, video, canvas {
                 }
             }
         }
+
+        // ==================== STICKY NAVIGATION & BACK TO TOP ====================
+        const stickyNav = document.getElementById('stickyNav');
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80; // Adjust for sticky nav height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            // Sticky nav is always visible, no need for scroll logic
+            
+            // Back to top button
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Back to top functionality
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
         // ==================== Converter Tool ====================
         const converterUploadArea = document.getElementById('converterUploadArea');
